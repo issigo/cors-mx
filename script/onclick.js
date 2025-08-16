@@ -16,16 +16,8 @@ var p2pConfi2= str.search("var p2pConfig");
 const code = codigo;
       var scriptElement = $("<script>").text(code);
       $("body").append(scriptElement);
-      alert('Variable: '+'https://cors.jugorder.de/'+playbackURL);
-  //console.log(code);
-      //console.log("alert(playbackURL);");
-    //$( "#codigoScript" ).html("<script>console.log(code);</script>");
-      // $( "#codigoScript" ).html("<script>var contador=0;</script>");
-      //console.log(contador);
-  //  $( "#codigoScript" ).html("<script><br>console.log("+contador+");</script>");
-      //$( "#codigoScript" ).html("<script>console.log(contador++);contador++;</script>");
-     // m3u8=html("<script>console.log(playbackURL);</script>");
-      
+      alert('Variable: '+playbackURL);
+   
 
 setTimeout(code, 1000);
    
