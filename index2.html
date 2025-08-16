@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" dir="ltr"><head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>Deportes LATAM</title>
+<link rel="icon" type="image/x-icon" href="style/favicon.ico">
+<link rel="stylesheet" title="Default" href="style/style.css" type="text/css" media="screen">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script/onclick.js"></script>
+<meta name="description" content="Deportes">
+<meta property="og:title" content="Deportes">
+<meta property="og:description" content="TV a tú manera">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+	<div class="channelframe">
+		<div class="channel">
+				<div id="IPTVd" style="position:fixed;"></div>
+				<iframe id="IPTV" src="" width="460" height="259" allowfullscreen frameborder='0' style="width: 100%; height: 100%;"></iframe>
+			<script>
+			  function capitalizeAllLetters(str) {
+			        return str.toUpperCase();
+			  }
+                          function changeChannel(newChannel,url,description) {
+				  //https://cdn-calisports-pri-01.vos360.video/Content/LiveEvent/22012025_Feyenoord_Vs_Bayer/DASH/master.mpd
+				  //https://cdn-calisports-pri-01.vos360.video/Content/LiveEvent/22012025_PSG_Vs_Manchester_City/DASH/master.mpd
+				  //kid=57d9f2e808050bdf7a604fb2556ff406&ky=789d04a9f546057231db23e68115e951
+				var date = new Date();
+				var day = date.getDay();
+				var alreadyActive = document.querySelectorAll(".active");
+				[].forEach.call(alreadyActive, function(el) {
+				    el.classList.remove("active");
+				});
+				newChannel.classList.add("active");
+				for (const child of newChannel.children) {
+				  child.classList.add("active");
+				}
+				document.getElementById("IPTV").src = url;
+				document.getElementById("program-name").textContent = capitalizeAllLetters(description);
+			  }
+			</script>
+		</div>
+	<img src="style/digiplex.png" alt="DIGIPLEX" height="20px" class="framelogo">
+</div>
+
+<div class="channelinfoframe">
+	<h1 id="timeinfo"></h1>
+		<div class="channelinfo name">
+			<h1 class="channelinfotext" id="program-name"></h1>
+		</div>
+		<div class="channelinfo time">
+			<h1 class="channelinfotext" id="program-time">HH:MMTT - HH:MMTT</h1>
+		</div>
+</div>
+	<div class="EPG" scrolling="yes">
+	<div class="EPGcontent">
+
+
+<button id='b1' class="channelEPG">
+		<p class="EPGtext">1 ESPN 1</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b2' class="channelEPG">
+		<p class="EPGtext">2 ESPN 2</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b3' class="channelEPG">
+		<p class="EPGtext">3 ESPN 3</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b4' class="channelEPG">
+		<p class="EPGtext">4 ESPN 4</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b5' class="channelEPG">
+		<p class="EPGtext">5 ESPN 5</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b6' class="channelEPG">
+		<p class="EPGtext">6 ESPN 6</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b7' class="channelEPG">
+		<p class="EPGtext">7 ESPN 7</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b8' class="channelEPG">
+		<p class="EPGtext">8 Win Sports PLUS</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b9' class="channelEPG">
+		<p class="EPGtext">9 Win Sports PLUS (Op2)</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b10' class="channelEPG">
+		<p class="EPGtext">10 Win Sports</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b11' class="channelEPG">
+		<p class="EPGtext">11 Win Play PLUS</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b12' class="channelEPG">
+		<p class="EPGtext">12 Fox Sports 1 (Argentina)</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b13' class="channelEPG">
+		<p class="EPGtext">13 Fox Sports 2 (Argentina)</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b14' class="channelEPG">
+		<p class="EPGtext">14 Fox Sports 3 (Argentina)</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b15' class="channelEPG">
+		<p class="EPGtext">15 Dsports</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b16' class="channelEPG">
+		<p class="EPGtext">16 Dsports 2</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b17' class="channelEPG">
+		<p class="EPGtext">17 Dsports PLUS</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b18' class="channelEPG">
+		<p class="EPGtext">18 TNT Sports Chile</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b19' class="channelEPG">
+		<p class="EPGtext">19 TNT Sports Argentina</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b20' class="channelEPG">
+		<p class="EPGtext">20 ESPN Premium Argentina</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b21' class="channelEPG">
+		<p class="EPGtext">21 TyC Sports</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b22' class="channelEPG">
+		<p class="EPGtext">22 Telefe</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b23' class="channelEPG">
+		<p class="EPGtext">23 TV Pública</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b24' class="channelEPG">
+		<p class="EPGtext">24 Liga 1 MAX</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b25' class="channelEPG">
+		<p class="EPGtext">25 GolTV</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b26' class="channelEPG">
+		<p class="EPGtext">26 VTV PLUS</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b27' class="channelEPG">
+		<p class="EPGtext">27 GolPeru</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b28' class="channelEPG">
+		<p class="EPGtext">28 ESPN Deportes USA</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b29' class="channelEPG">
+		<p class="EPGtext">29 TUDN USA</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b30' class="channelEPG">
+		<p class="EPGtext">30 Fox Sports 1 USA</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b31' class="channelEPG">
+		<p class="EPGtext">31 Fox Sports 2 USA</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b32' class="channelEPG">
+		<p class="EPGtext">32 Universo USA</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b33' class="channelEPG">
+		<p class="EPGtext">33 Univisíon USA</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b34' class="channelEPG">
+		<p class="EPGtext">34 Azteca Deportes MX</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b35' class="channelEPG">
+		<p class="EPGtext">35 Fox Deportes USA</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b36' class="channelEPG">
+		<p class="EPGtext">36 Fox Sports 1 MX</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b37' class="channelEPG">
+		<p class="EPGtext">37 Fox Sports 2 MX</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b38' class="channelEPG">
+		<p class="EPGtext">38 ESPN 2 MX</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b39' class="channelEPG">
+		<p class="EPGtext">39 ESPN MX</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b40' class="channelEPG">
+		<p class="EPGtext">40 ESPN 3 MX</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b41' class="channelEPG">
+		<p class="EPGtext">41 Fox Sports 3 MX</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b42' class="channelEPG">
+		<p class="EPGtext">42 Fox Sports Premium</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b43' class="channelEPG">
+		<p class="EPGtext">43 TVC Deportes MX</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b44' class="channelEPG">
+		<p class="EPGtext">44 HI! Sports MX</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b45' class="channelEPG">
+		<p class="EPGtext">45 DAZN 1 ES</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b46' class="channelEPG">
+		<p class="EPGtext">46 DAZN 2 ES</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b47' class="channelEPG">
+		<p class="EPGtext">47 DAZN 3 ES (Solo eventos)</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b48' class="channelEPG">
+		<p class="EPGtext">48 DAZN 4 ES (Solo eventos)</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b49' class="channelEPG">
+		<p class="EPGtext">49 DAZN LaLiga</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b50' class="channelEPG">
+		<p class="EPGtext">50 MovistarPLUS LaLiga</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b51' class="channelEPG">
+		<p class="EPGtext">51 Movistar Liga de Campeones</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b52' class="channelEPG">
+		<p class="EPGtext">52 Movistar Liga de Campeones 2</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b53' class="channelEPG">
+		<p class="EPGtext">53 Movistar Liga de Campeones 3</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b54' class="channelEPG">
+		<p class="EPGtext">54 TNT 1 GB</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b55' class="channelEPG">
+		<p class="EPGtext">55 Caracol TV</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b56' class="channelEPG">
+		<p class="EPGtext">56 TNT 3 GB</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b57' class="channelEPG">
+		<p class="EPGtext">57 TNT 4 GB</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b58' class="channelEPG">
+		<p class="EPGtext">58 Sky Sports Bundesliga 1</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b59' class="channelEPG">
+		<p class="EPGtext">59 RCN CO</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b60' class="channelEPG">
+		<p class="EPGtext">60 TNT 2 GB</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b61' class="channelEPG">
+		<p class="EPGtext">61 Sky Sports Bundesliga 3</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b62' class="channelEPG">
+		<p class="EPGtext">62 Sky Sports Bundesliga 2</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b63' class="channelEPG">
+		<p class="EPGtext">63 Sky Sports Bundesliga 5</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b64' class="channelEPG">
+		<p class="EPGtext">64 Sky Sports Bundesliga 4</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b65' class="channelEPG">
+		<p class="EPGtext">65 Eleven Sports 2 PT</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b66' class="channelEPG">
+		<p class="EPGtext">66 Eleven Sports 1 PT</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b67' class="channelEPG">
+		<p class="EPGtext">67 Eleven Sports 3 PT</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b68' class="channelEPG">
+		<p class="EPGtext">68 DAZN 1 DE</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b69' class="channelEPG">
+		<p class="EPGtext">69 DAZN 2 DE</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b70' class="channelEPG">
+		<p class="EPGtext">70 Eleven Sports 4 PT</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b71' class="channelEPG">
+		<p class="EPGtext">71 Eleven Sports 5 PT</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b72' class="channelEPG">
+		<p class="EPGtext">72 Canal 11 PT</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b73' class="channelEPG">
+		<p class="EPGtext">73 Sport TV 3 PT</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b74' class="channelEPG">
+		<p class="EPGtext">74 Sport TV 4 PT</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b75' class="channelEPG">
+		<p class="EPGtext">75 Sport TV 2 PT</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b76' class="channelEPG">
+		<p class="EPGtext">76 Sport TV 1 PT</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b77' class="channelEPG">
+		<p class="EPGtext">77 Sport TV 5 PT</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b78' class="channelEPG">
+		<p class="EPGtext">78 Sport TV 6 PT</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b79' class="channelEPG">
+		<p class="EPGtext">79 Sport TV 6 BR</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b80' class="channelEPG">
+		<p class="EPGtext">80 Sport TV 3 BR</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b81' class="channelEPG">
+		<p class="EPGtext">81 Sport TV 1 BR</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b82' class="channelEPG">
+		<p class="EPGtext">82 Premiere 2 BR</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b83' class="channelEPG">
+		<p class="EPGtext">83 Premier Sports 1 Irlanda</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b84' class="channelEPG">
+		<p class="EPGtext">84 Premier Sports 2 Irlanda</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b85' class="channelEPG">
+		<p class="EPGtext">85 Premiere 1 BR</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b86' class="channelEPG">
+		<p class="EPGtext">86 ESPN 2 NL</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b87' class="channelEPG">
+		<p class="EPGtext">87 Premiere 3 BR</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b88' class="channelEPG">
+		<p class="EPGtext">88 TSN 2</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b89' class="channelEPG">
+		<p class="EPGtext">89 ESPN 1 NL</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b90' class="channelEPG">
+		<p class="EPGtext">90 ESPN 3 NL</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b91' class="channelEPG">
+		<p class="EPGtext">91 Caliente TV</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b92' class="channelEPG">
+		<p class="EPGtext">92 TSN 1</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b93' class="channelEPG">
+		<p class="EPGtext">93 TSN 3</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b94' class="channelEPG">
+		<p class="EPGtext">94 TSN 4</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b95' class="channelEPG">
+		<p class="EPGtext">95 Vamos ES</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b96' class="channelEPG">
+		<p class="EPGtext">96 TyC Sports Internacional</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b97' class="channelEPG">
+		<p class="EPGtext">97 USA Network</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b98' class="channelEPG">
+		<p class="EPGtext">98 SporstNet EAST</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b99' class="channelEPG">
+		<p class="EPGtext">99 TSN 5</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b100' class="channelEPG">
+		<p class="EPGtext">100 Universo USA</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b101' class="channelEPG">
+		<p class="EPGtext">101 SN360</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b102' onclick="changeChannel(this,'online/player.html?get=','TyC Sports Internacional')" class="channelEPG">
+		<p class="EPGtext">102 TyC Sports Internacional</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b103' onclick="changeChannel(this,'online/player.html?get=','Canal 5 MX')" class="channelEPG">
+		<p class="EPGtext">103 Canal 5 MX</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b104' onclick="changeChannel(this,'online/player.html?get=','TUDN MX')" class="channelEPG">
+		<p class="EPGtext">104 TUDN MX</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b105' onclick="changeChannel(this,'online/player.html?get=','Sky Sports Main Event')" class="channelEPG">
+		<p class="EPGtext">105 Sky Sports Main Event</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b106' onclick="changeChannel(this,'online/player.html?get=','Sky Sports Football')" class="channelEPG">
+		<p class="EPGtext">106 Sky Sports Football</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b107' onclick="changeChannel(this,'online/player.html?get=','Sky Sports Football ')" class="channelEPG">
+		<p class="EPGtext">107 Sky Sports Football </p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b108' onclick="changeChannel(this,'online/player.html?get=','Sky Sports Cricket ')" class="channelEPG">
+		<p class="EPGtext">108 Sky Sports Cricket </p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b109' onclick="changeChannel(this,'online/player.html?get=','Sky Sports Golf ')" class="channelEPG">
+		<p class="EPGtext">109 Sky Sports Golf </p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b110' onclick="changeChannel(this,'online/player.html?get=','Sky Sports F1 ')" class="channelEPG">
+		<p class="EPGtext">110 Sky Sports F1 </p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b111' onclick="changeChannel(this,'online/player.html?get=','Sky Sports Tennis ')" class="channelEPG">
+		<p class="EPGtext">111 Sky Sports Tennis </p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b112' onclick="changeChannel(this,'online/player.html?get=','CBS Sports Network ')" class="channelEPG">
+		<p class="EPGtext">112 CBS Sports Network </p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b113' onclick="changeChannel(this,'online/player.html?get=','FUTV (EV) ')" class="channelEPG">
+		<p class="EPGtext">113 FUTV (EV) </p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b114' onclick="changeChannel(this,'online/player.html?get=','ESPN 1 BR ')" class="channelEPG">
+		<p class="EPGtext">114 ESPN 1 BR </p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b115' onclick="changeChannel(this,'online/player.html?get=','ESPN 2 BR ')" class="channelEPG">
+		<p class="EPGtext">115 ESPN 2 BR </p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b116' onclick="changeChannel(this,'online/player.html?get=','ESPN 3 BR ')" class="channelEPG">
+		<p class="EPGtext">116 ESPN 3 BR </p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b117' onclick="changeChannel(this,'online/player.html?get=','ESPN 4 BR ')" class="channelEPG">
+		<p class="EPGtext">117 ESPN 4 BR </p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b118' onclick="changeChannel(this,'online/player.html?get=','LaLiga Hypermotion')" class="channelEPG">
+		<p class="EPGtext">118 LaLiga Hypermotion</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+<button id='b119' onclick="changeChannel(this,'online/player.html?get=','Fox Deportes TUBI')" class="channelEPG">
+		<p class="EPGtext">119 Fox Deportes TUBI</p></button>
+ <div class="channelEPG 2">
+		<p class="contentEPGtext">No disponible..</p>
+		</div>
+
+
+
+		
+
+		
+<p id="codigoScript">codigo</p>
+
+	</div>
+</div>
+
+<script>
+	function updateTime() {
+	  var now = new Date();
+	  var timeinfo = now.toLocaleString();
+	  document.getElementById("timeinfo").innerHTML = timeinfo;
+	}
+	setInterval(updateTime, 1);
+</script>
+
+<script>
+const DIV = document.querySelector('.channel')
+
+const toggleFullscreen = () => {
+  if (document.fullscreenElement)
+    document.exitFullscreen()
+  else
+    DIV.requestFullscreen()
+}
+
+DIV.addEventListener('click', toggleFullscreen)
+
+const onChange = () => {
+  DIV.className = document.fullscreenElement ? 'fullscreen' : 'channel'
+}
+
+document.addEventListener('fullscreenchange', onChange)
+
+
+
+	
+</script>
+
+	
+</body>
+</html>
