@@ -25,7 +25,7 @@ setTimeout(code, 1000);
                   
                   //if(nombre.at(nombre)==(idbutton+1)){
 //$('#b'+(idbutton+1)).attr('onClick', "changeChannel(this,'https://deportesmx.vercel.app/online/player.html?get="+m3u8+"','"+nombre+"');");//}
-    $('#b'+(idbutton+1)).attr('onClick', "changeChannel(this,'https://deportesmx.vercel.app/online/player.html?get="+playbackURL+"','"+nombre+"');");
+    $('#b'+(idbutton+1)).attr('onClick', "changeChannel(this,'https://deportesmx.vercel.app/api/proxy?url=https://deportesmx.vercel.app/online/player.html?get="+playbackURL+"','"+nombre+"');");
     $('#b'+(idbutton+1)).text(nombre);
 //console.log('id '+(idbutton+1)+' : '+m3u8);
 });
