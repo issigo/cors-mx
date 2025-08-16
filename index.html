@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tester CORS Proxy</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem}
+    textarea,input,button,select{font-size:16px}
+    pre{background:#111;color:#eee;padding:1rem;border-radius:12px;overflow:auto}
+    .row{display:flex;gap:8px;flex-wrap:wrap}
+    .row>*{flex:1}
+  </style>
+</head>
+<body>
+  <h1>Tester CORS Proxy (Vercel)</h1>
+  <p>1) Edita la URL destino y pulsa <b>GET</b> o <b>POST JSON</b>.</p>
+  <div class="row">
+    <input id="proxy" value="/api/proxy?url=" />
+    <input id="target" value="https://api.publicapis.org/entries" />
+  </div>
+  <div class="row" style="margin-top:8px">
+    <button onclick="doGet()">GET</button>
+    <button onclick="doPost()">POST JSON</button>
+  </div>
+  <h3>Resultado</h3>
+  <pre id="out">...</pre>
+
+<script>
+const $ = sel => document.querySelector(sel);
+function print(obj){ $('#out').textContent = typeof obj === 'string' ? obj : JSON.stringify(obj, null, 2); }
+
+async function doGet(){
+  const u = $('#proxy').value + encodeURIComponent($('#target').value);
+  try {
+    const r = await fetch(u);
+    const ct = r.headers.get('content-type') || '';
+    if (ct.includes('application/json')) {
+      print(await r.json());
+    } else {
+      print(await r.text());
+    }
+  } catch(e){ print('Error: '+e.message); }
+}
+
+async function doPost(){
+  const u = $('#proxy').value + encodeURIComponent($('#target').value);
+  try {
+    const r = await fetch(u, {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({hello:'world'})
+    });
+    const ct = r.headers.get('content-type') || '';
+    if (ct.includes('application/json')) {
+      print(await r.json());
+    } else {
+      print(await r.text());
+    }
+  } catch(e){ print('Error: '+e.message); }
+}
+</script>
+</body>
+</html>

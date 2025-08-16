@@ -1,0 +1,7 @@
+{
+  "name": "cors-proxy",
+  "version": "2.0.0",
+  "description": "Simple CORS proxy on Vercel Serverless Functions",
+  "main": "api/proxy.js",
+  "license": "MIT"
+}
