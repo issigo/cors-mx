@@ -1,0 +1,67 @@
+
+
+<html lang="es">
+<script src="//cdn.jsdelivr.net/npm/@clappr/player@0.8/dist/clappr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/p2p-engine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/clappr-p2p-plugin.min.js"></script>
+  
+  <head>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="referrer" content="no-referrer" />
+<title>Digital Sports</title>
+<style type="text/css">
+body {
+   margin: 0;
+   padding: 0;
+}
+</style>
+
+</head>
+<body>
+<script type="text/javascript">
+function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
+	var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+	results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+</script>
+
+
+<div id="player" width="100%" height="100%"></div>
+  
+<!--<iframe allow="encrypted-media" width="100%" height="100%" id="player" frameborder="0"></iframe>
+--><script>
+var playbackURL =getParameterByName('get');
+var player;
+var p2pConfig = {
+    trackerZone: 'us',
+    sourceUrl: playbackURL
+};
+P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(() => {
+    player = new Clappr.Player({
+        source: playbackURL,
+        parentId: "#player",
+        poster: '',
+        width: '100%',
+        height: '100%',
+        autoPlay: true,
+        playsinline: true, 
+        mute: false,
+        plugins: [SwarmCloudClapprPlugin],
+        playback: {
+            hlsjsConfig: {
+                maxBufferSize: 0,
+                maxBufferLength: 12,
+                liveSyncDurationCount: 3,
+                p2pConfig: p2pConfig
+            }
+        }
+    });
+});
+player.setVolume(100); 
+player.configure({ mute: false });
+</script>
+
+</body>

@@ -1,0 +1,69 @@
+<html lang="es">
+<head>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="referrer" content="no-referrer" />
+<cross-domain-policy><allow-access-from domain="*"/></cross-domain-policy>
+<title>IZZIGO WEB PLAYER</title>
+<style type="text/css">
+body {
+   margin: 0;
+   padding: 0;
+}
+video {
+    //position: fixed;
+	right: 0; bottom: 0;
+	border: 0;
+	width: 100%;
+    height: 100%;
+
+
+}
+
+</style>
+
+<script src="https://reference.dashif.org/dash.js/latest/dist/dash.all.debug.js"></script>	
+</head>
+<body>
+
+
+<script type="text/javascript">
+function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
+	var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+	results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+var get = getParameterByName('get');var get = getParameterByName('get');var get = getParameterByName('get');var get = getParameterByName('get');var get = getParameterByName('get');var get = getParameterByName('get');
+	
+</script>
+
+<video id="player" controls></video>
+
+<script>
+var video,player;
+const protData = {
+//https://genuine-verina-izzigo-2a03cfb7.koyeb.app
+	
+                "com.widevine.alpha": {
+                    "serverURL": "https://izzigo.koyeb.app",
+
+                    priority: 0
+                }
+            };
+video = document.getElementById("player");
+            //video = document.querySelector('#IPTV');
+            player = dashjs.MediaPlayer().create();
+//console.log(video+ ' '+ get);
+
+            player.initialize(video, get, true);
+            player.setProtectionData(protData);
+
+
+
+	
+</script>
+
+
+
+
+</body>

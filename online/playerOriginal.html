@@ -1,0 +1,49 @@
+<html lang="es">
+<head>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="referrer" content="no-referrer" />
+<title>Digital Sports</title>
+<style type="text/css">
+body {
+   margin: 0;
+   padding: 0;
+}
+</style>
+
+</head>
+<body>
+<script type="text/javascript">
+function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
+	var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+	results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+var canal = getParameterByName('get');
+var canal1 = getParameterByName('canal');
+
+</script>
+<iframe allow="encrypted-media" width="100%" height="100%" id="player" frameborder="0"></iframe>
+
+<script>
+var canalito= document.getElementById("player");
+	if(canal=="directv_sports"){
+		//https://streamtp2.com/global1.php?stream=espn_premium
+canalito.src = "https://tucanaldeportivo.org/"+canal1+".php";
+		
+	}
+	if(canal=="espn"){
+		//https://streamtp2.com/global1.php?stream=espn_premium
+canalito.src = "https://streamtp3.com/global2.php?stream="+canal1;
+		
+	}	else{
+	//alert( "https://streamdz1.xyz/player/embed.php?channel="+canal);
+		//streamdz3.lat/player
+		//streamdz3.lat/player/porfavordejadejoder.php?channel=
+	canalito.src = "https://streamdz3.lat/player/porfavordejadejoder.php?channel="+canal;}
+	//canalito.autoStart=true;
+</script>
+	
+
+</body>
